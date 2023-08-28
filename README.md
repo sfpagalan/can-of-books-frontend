@@ -31,6 +31,17 @@ Actual time needed to complete: 35 minutes.
 
 -----------------
 
+*Name of feature: Lab 11 no.3
+Estimate of time needed to complete: 3-5hrs
+
+Start time: 1430
+
+Finish time: 1644
+
+Actual time needed to complete: more than 2 hrs.
+
+-----------------
+
 *Name of feature: 
 Estimate of time needed to complete: 30 minutes
 

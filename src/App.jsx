@@ -22,7 +22,7 @@ class App extends React.Component {
               element={<BestBooks />}
             />
             <Route 
-              path="/about"
+              path="/About"
               element={<About />}
             />
           </Routes>

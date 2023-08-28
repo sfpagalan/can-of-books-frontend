@@ -16,7 +16,7 @@ class BestBooks extends React.Component {
       const books = response.data;
       this.setState({ books });
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   }
 
