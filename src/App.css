@@ -1,0 +1,123 @@
+body {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  font-family: 'Audiowide', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  height: 120px;
+  padding: 10px;
+}
+
+  /* Navigation styles */
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+
+.navbar-brand {
+  text-align: center;
+}
+
+.nav-item {
+  display: inline-block;
+  background-color: antiquewhite;
+  width: 60px;
+  border-radius: 5px;
+  margin: 5px;
+
+}
+
+/* Main content styles */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+a.carousel-control-prev {
+  width: 0;
+  height: 0;
+}
+
+a.carousel-control-next {
+  width: 0;
+  height: 0;
+}
+
+.carousel-item {
+}
+
+/* book contents */
+.book-title {
+  color: black;
+}
+
+.book-description {
+  color: black;
+}
+
+.book-status {
+  color: black;
+}
+
+img {
+  width: 500px;
+}
+
+
+/* Button styles */
+.add-button {
+  font-size: 10px;
+  background-color: aquamarine;
+  height: 25px;
+  width: 70px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.btn.btn-danger {
+  background-color: whitesmoke;
+  color: #ED2939;
+  font-size: 15px;
+  height: 30px;
+  width: 60px;
+  padding: 0;
+}
+
+.btn.btn-secondary {
+  background-color: whitesmoke;
+  color: rgb(17, 62, 17);
+  margin-left: 5px;
+  font-size: 15px;
+  height: 30px;
+  width: 60px;
+  padding: 0;
+}
+
+.btn.btn-primary {
+  background-color: whitesmoke;
+  color: rgb(17, 62, 17);
+  margin-left: 5px;
+  font-size: 15px;
+  height: 30px;
+  width: 60px;
+  padding: 0;
+}
+
+.btn.btn-primary:hover {
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
