@@ -42,6 +42,17 @@ Actual time needed to complete: more than 2 hrs.
 
 -----------------
 
+*Name of feature: Lab 12
+Estimate of time needed to complete: 10 hrs
+
+Start time: 1430
+
+Finish time: 1800
+
+Actual time needed to complete: 5 hrs.
+
+-----------------
+
 *Name of feature: 
 Estimate of time needed to complete: 30 minutes
 
@@ -52,6 +63,8 @@ Finish time: 1505
 Actual time needed to complete: 35 minutes.
 
 ## Credit and Collaborations
+
+- Jacob: MongoDB Atlas
 
 ## Collaboration Agreement
 
