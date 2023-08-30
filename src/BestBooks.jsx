@@ -2,9 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Button } from 'react-bootstrap'; 
 import axios from 'axios';
-import classNames from 'classnames';
 import BookFormModal from './BookFormModal';
-import AddBooks from './AddBooks';
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -56,6 +54,18 @@ class BestBooks extends React.Component {
     }
   }
 
+  handleDelete = async (bookId) => {
+    try {
+      this.setState({ isLoading: true });
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/books/${bookId}`);
+      const updatedBooks = this.state.books.filter(book => book._id !== bookId);
+      this.setState({ books: updatedBooks, isLoading: false, error: null });
+    } catch (error) {
+      console.error(error);
+      this.setState({ isLoading: false, error: 'Failed to delete the book. Please try again.' });
+    }
+  }
+
   render() {
     const { books, isLoading, error, activeIndex } = this.state;
 
@@ -71,7 +81,6 @@ class BestBooks extends React.Component {
           <>
             <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
-
             {books.length ? (
               <div>
                 <Carousel activeIndex={activeIndex} onSelect={() => {}}>
@@ -80,6 +89,19 @@ class BestBooks extends React.Component {
                       <h3>{book.title}</h3>
                       <p>{book.description}</p>
                       <p>Status: {book.status}</p>
+                      <Button
+                        variant="danger"
+                        onClick={() => this.handleDelete(book._id)}
+                        disabled={isLoading}
+                      >
+                    {isLoading ? (
+                      <>
+                        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />
+                        Deleting...
+                      </>
+                  ) : (
+                    'Delete'
+                  )}                      </Button>                    
                     </Carousel.Item>
                   ))}
                 </Carousel>
@@ -96,7 +118,12 @@ class BestBooks extends React.Component {
               onHide={() => this.setState({ isModalOpen: false })}
               onSubmit={this.handleFormSubmit}
             />
-            <AddBooks onClick={() => this.setState({ isModalOpen: true })} />
+            <button
+              className="btn btn-primary"
+              onClick={() => this.setState({ isModalOpen: true })}
+            >
+              Add Book
+            </button>
           </>
         )}
       </>
