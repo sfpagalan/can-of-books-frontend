@@ -50,7 +50,17 @@ a.carousel-control-next {
   height: 0;
 }
 
-.carousel-item {
+.carousel.slide {
+  text-align: center;
+}
+
+.carousel-indicators {
+  width: 0;
+  height: 0;
+}
+
+.book-status {
+  margin: 0;
 }
 
 /* book contents */
@@ -91,6 +101,7 @@ img {
   height: 30px;
   width: 60px;
   padding: 0;
+  margin-bottom: 5px;
 }
 
 .btn.btn-secondary {
@@ -101,6 +112,7 @@ img {
   height: 30px;
   width: 60px;
   padding: 0;
+  margin-bottom: 5px;
 }
 
 .btn.btn-primary {
@@ -111,6 +123,7 @@ img {
   height: 30px;
   width: 60px;
   padding: 0;
+  margin-bottom: 5px;
 }
 
 .btn.btn-primary:hover {

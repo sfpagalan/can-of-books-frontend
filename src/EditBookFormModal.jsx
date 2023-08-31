@@ -29,6 +29,20 @@ class EditBookFormModal extends React.Component {
                     defaultValue={editBook ? editBook.title : ''}
                   />
                 </Form.Group>
+                <Form.Group controlId="description">
+                  <Form.Label>Description</Form.Label>
+                  <Form.Control
+                    type="text"
+                    defaultValue={editBook ? editBook.description : ''}
+                  />
+                </Form.Group>
+                <Form.Group controlId="status">
+                  <Form.Label>Status:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    defaultValue={editBook ? editBook.status : ''}
+                  />
+                </Form.Group>
                 <Button variant="primary" type="submit">Submit</Button>
               </Form>
             </Modal.Body>

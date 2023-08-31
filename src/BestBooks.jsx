@@ -109,7 +109,7 @@ class BestBooks extends React.Component {
           <div>Error: {error.message}</div>
         ) : (
           <>
-            <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
+            {/* <h2>My Can of Books</h2> */}
 
             {books.length ? (
               <div>
@@ -122,8 +122,7 @@ class BestBooks extends React.Component {
                 <Carousel activeIndex={activeIndex} onSelect={() => {}}>
                   {books.map((book, index) => (
                     <Carousel.Item key={book._id}>
-                      {/* <img src='./assets/book-bgrnd.jpeg'/>
-                      <Carousel.Caption> */}
+                      {/* <Carousel.Caption> */}
                           <h3 className='book-title'>{book.title}</h3>
                           <p className='book-description'>{book.description}</p>
                           <p className='book-status'>Status: {book.status}</p>
