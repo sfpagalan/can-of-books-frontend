@@ -16,6 +16,14 @@ class AddBookFormModal extends React.Component {
               <Form.Label>Title</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
+            <Form.Group controlId="description">
+              <Form.Label>Description</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+            <Form.Group controlId="status">
+              <Form.Label>Status:</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
