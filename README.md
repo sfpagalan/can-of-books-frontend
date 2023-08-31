@@ -9,14 +9,28 @@
 Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
 
 ## Getting Started
+
 - Follow the guide in Trello [Link](https://trello.com/invite/b/mwIdymSZ/ATTIbfe2d891a24878b0611e93064d75e779C5B6B7EF/can-of-books)
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+- React Vite
+- Express js
+- MongoDB
+- Netlify
+- Render
 
 ## Change Log
 
 *08-28-23 1505: Completed the Collaboration Agreement.
+*08-29-23 1437: Started Lab 12.
+*08-29-23 1454: Finished distributing tasks between partner.
+*08-29-23 1530: Decided to do a huddle with Jacob for clarification and guidance.
+*08-29-23 1845: Completed Lab 12.
+*08-30-23 1402: Distributed tasks with partner for Lab 13.
+*08-30-23 1431: Alejandra finished the backend part of Lab 13.
+*08-30-23 1500: Finished writing up the code for the frontend but came across a problem with the edit modal only opening when I have the developer tool open for debuggin.
+*08-30-23 1515: Messaged Jacob for assistance with the edit modal problem.
 
 ## Estimates
 
@@ -53,6 +67,17 @@ Actual time needed to complete: 5 hrs.
 
 -----------------
 
+*Name of feature: Lab 13
+Estimate of time needed to complete: 10 hours
+
+Start time: 1402
+
+Finish time: 1505
+
+Actual time needed to complete: .
+
+-----------------
+
 *Name of feature: 
 Estimate of time needed to complete: 30 minutes
 
@@ -65,6 +90,7 @@ Actual time needed to complete: 35 minutes.
 ## Credit and Collaborations
 
 - Jacob: MongoDB Atlas
+- ChatGPT: Clarification and Reorganizing code.
 
 ## Collaboration Agreement
 
