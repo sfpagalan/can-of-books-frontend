@@ -39,10 +39,16 @@ class BestBooks extends React.Component {
     const { editBook } = this.state;
 
     try {
+      const requestData = {
+        title: formData.title,
+        description: formData.description,
+        status: formData.status
+      };
+
       if (editBook) {
-        await axios.put(`${import.meta.env.VITE_BACKEND_URL}/books/${editBook._id}`, formData);
+        await axios.put(`${import.meta.env.VITE_BACKEND_URL}/books/${editBook._id}`, requestData);
       } else {
-        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/books`, formData);
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/books`, requestData);
       }
 
       await this.fetchBooks();
@@ -51,6 +57,16 @@ class BestBooks extends React.Component {
       console.error(error);
     }
   }
+
+  handleAddFormSubmit = async (formData) => {
+    try {
+      await this.handleFormSubmit(formData);
+      this.setState({ isAdding: false });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
 
   handleEditFormSubmit = async (formData) => {
     try {
@@ -119,6 +135,12 @@ class BestBooks extends React.Component {
                 >
                   Add Book
                 </button>
+                <AddBookFormModal
+                  show={isAdding}
+                  onHide={() => this.setState({ isAdding: false })}
+                  onSubmit={this.handleAddFormSubmit}
+                  isModalOpen={isAdding}
+                />
                 <Carousel activeIndex={activeIndex} onSelect={() => {}}>
                   {books.map((book, index) => (
                     <Carousel.Item key={book._id}>
@@ -161,13 +183,6 @@ class BestBooks extends React.Component {
               onSubmit={this.handleEditFormSubmit}
               editBook={this.state.editBook}
             />
-
-            <AddBookFormModal
-              show={isAdding}
-              onHide={() => this.setState({ isAdding: false })}
-              onSubmit={this.handleAddFormSubmit}
-            />
-
           </>
         )}
       </>
