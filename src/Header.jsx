@@ -1,10 +1,9 @@
 import React from 'react';
 import { Navbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+import AuthButtons from './components/auth/AuthButtons';
 
 function Header() {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -12,17 +11,10 @@ function Header() {
       <Nav className="mr-auto">
         <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
         <NavItem><Link to="/about" className="nav-link">About</Link></NavItem>
+        <NavItem><Link to="/profile" className="nav-link">Profile</Link></NavItem>
       </Nav>
       <Nav>
-        {isAuthenticated ? (
-          <NavItem onClick={() => logout({ returnTo: window.location.origin })}>
-            <span className="nav-link">Logout</span>
-          </NavItem>
-        ) : (
-          <NavItem onClick={() => loginWithRedirect()}>
-            <span className="nav-link">Login</span>
-          </NavItem>
-        )}
+      <AuthButtons />
       </Nav>
     </Navbar>
   );
