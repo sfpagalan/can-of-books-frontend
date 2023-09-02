@@ -9,6 +9,7 @@ import {
   Route,
   Routes
 } from "react-router-dom";
+import Profile from './Profile';
 
 class App extends React.Component {
   render() {
@@ -24,6 +25,9 @@ class App extends React.Component {
             <Route 
               path="/About"
               element={<About />}
+            />
+            <Route path="/profile" 
+            element={<Profile />} 
             />
           </Routes>
           <Footer />

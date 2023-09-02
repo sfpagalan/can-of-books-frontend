@@ -23,13 +23,31 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
   text-align: center;
 }
 
+.mr-auto.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+
 .nav-item {
-  display: inline-block;
+  /* display: flex;
+  flex-wrap: wrap; */
   background-color: antiquewhite;
-  width: 60px;
+  width: 45px;
+  height: 20px;
   border-radius: 5px;
   margin: 5px;
+  /* align-content: center;
+  justify-content: center;
+  align-self: center; */
+}
 
+a.nav-link {
+  font-size: 10px;
+  padding: 0;
+  padding-top: 2px;
+  color: black;
 }
 
 /* Main content styles */

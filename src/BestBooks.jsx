@@ -5,6 +5,7 @@ import { Carousel, Button } from 'react-bootstrap';
 import axios from 'axios';
 import EditBookFormModal from './EditBookFormModal';
 import AddBookFormModal from './AddBookFormModal';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -17,20 +18,42 @@ class BestBooks extends React.Component {
       editBook: null,
       isEditing: false,
       isAdding: false,
+      token: null,
     };
   }
 
   async componentDidMount() {
-    await this.fetchBooks();
+    try {
+      let res = await this.props.auth0.getIdTokenClaims();
+      const token = res?._raw;
+      if (token) {
+        this.setState({ token });
+          this.fetchBooks
+      }
+  
+      await this.fetchBooks();
+    } catch (error) {
+      console.error(error);
+    }
   }
+  
 
   async fetchBooks() {
+    const config = {
+      headers: {
+        'Authorization': `Bearer ${this.state.token}`
+      },
+      method: 'GET',
+      baseURL: import.meta.env.VITE_BACKEND_URL,
+      url: '/books'
+    }
     try {
-      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/books`);
+      const response = await axios(config);
       const books = response.data;
       console.log(books);
       this.setState({ books, isLoading: false, error: null });
     } catch (error) {
+      console.error("Error fetching books:", error);
       this.setState({ error, isLoading: false });
     }
   }
@@ -121,6 +144,8 @@ class BestBooks extends React.Component {
     console.log(this.state)
     return (
       <>
+        {/* {this.props.auth0.isAuthenticated ? <h2>My Can of Books</h2> : <h3>Please Log In</h3>} */}
+
         {error ? (
           <div>Error: {error.message}</div>
         ) : (
@@ -190,4 +215,6 @@ class BestBooks extends React.Component {
   }
 }
 
-export default BestBooks;
+const AuthBestBooks = withAuth0(BestBooks);
+
+export default AuthBestBooks;

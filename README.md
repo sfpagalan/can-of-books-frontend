@@ -31,6 +31,10 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 *08-30-23 1431: Alejandra finished the backend part of Lab 13.
 *08-30-23 1500: Finished writing up the code for the frontend but came across a problem with the edit modal only opening when I have the developer tool open for debuggin.
 *08-30-23 1515: Messaged Jacob for assistance with the edit modal problem.
+*08-31-23: Exam day so we didn't have any lab work.
+*09-01-23 1400: Started lab 15.
+*09-01-23 1546: ./books stopped giving data.
+*09-01-23 1636: Checked server side and found discrepancy with a typo in server.js line 34.
 
 ## Estimates
 
@@ -78,14 +82,16 @@ Actual time needed to complete: .
 
 -----------------
 
-*Name of feature: 
-Estimate of time needed to complete: 30 minutes
+*Name of feature: 15
+Estimate of time needed to complete: 10 hrs
 
-Start time: 1430
+Start time: 1425
 
-Finish time: 1505
+Finish time: 1800
 
-Actual time needed to complete: 35 minutes.
+Actual time needed to complete: 4 hours.
+
+-----------------
 
 ## Credit and Collaborations
 
